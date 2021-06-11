@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> By D53O </title>
+</head>
+
+<body>
+    <img src="./WhatsApp Video 2021-06-10 at 22.26.43.gif" >
+    <h1> Rublo Russo Conversor </h1>
+
+    <div>
+
+        <input id="input-rublo" type="number" placeholder="Valor em Rublo Russo">
+        <input id="input-real" placeholder="Valor do Real">
+
+        <p id="valor-final-real">$ 0</p>
+
+
+        <button onclick="calcularReal()">Converter</button>
+    </div>
+
+    <h3 align="left"> Cotação Atual </h3>  <p id="subliminar" align="right"> janep me liga to com saudade </p>
+    <P id="cotação" align="left"> 1 rublo russo = 0,075 real </P> 
+    
+</body>
+
+<style>
+    body {
+        background-color: black;
+        text-align: center;
+    }
+
+    img {
+        width: 25%;
+    }
+
+    h1 {
+        color: #ff0000;
+        font-size: 50px;
+    }
+
+    input {
+        width: 140px;
+        height: 30px;
+    }
+
+    #input-rublo {
+        border: 3px solid #ff0000; 
+    }
+
+    #input-real {
+        border: 3px solid rgb(38, 0, 255);
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    h3 {
+       
+       color: #ff0000; 
+
+    }
+
+    #cotação {
+            
+        color: #ff0000; 
+
+    }
+
+    #subliminar {
+
+         color: rgba(82, 71, 71, 0.062);
+    }
+
+    button {
+        height: 40px;
+        width: 150px;
+        font-size: 20px;
+        cursor: pointer;
+        border: 3px solid azure; 
+        border-radius: 10px;
+        background-color: #323232;
+        color: white;
+    }
+
+    button:hover {
+        color: rgb(38, 0, 255); 
+        background-color: #ff0000; 
+    }
+</style>
+
+<script>
+
+    function calcularReal(){
+        let rublo = document.getElementById("input-rublo").value //variável guarda valor do rublo digitado
+        let real = document.getElementById("input-real").value // varialvel guarda valor do real digitado
+
+        let resultado = rublo * real // variavel guarda o valor do resultado
+
+        alert(resultado) // mostra na tela o resultado
+    }
+
+  
+
+
+
+</script>
+
+
+
+
+</html>
