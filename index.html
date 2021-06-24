@@ -12,16 +12,18 @@
     <div>
 
         <input id="input-rublo" type="number" placeholder="Valor em Rublo Russo">
-        <input id="input-real" placeholder="Valor do Real">
+        <input id="input-real" placeholder="0.068" class="display"> 
+        <br><br/> 
 
-        <p id="valor-final-real">$ 0</p>
+        <input disabled id="valor-final" class="display">
+        <br><br/>
 
 
         <button onclick="calcularReal()">Converter</button>
     </div>
 
-    <h3 align="left"> Cotação Atual </h3>  <p id="subliminar" align="right"> janep me liga to com saudade </p>
-    <P id="cotação" align="left"> 1 rublo russo = 0.075 real </P> 
+     <p id="subliminar" align="right"> janep me liga to com saudade </p>
+     
     
 </body>
 
@@ -53,26 +55,27 @@
         border: 3px solid rgb(38, 0, 255);
     }
 
+    #valor-final {
+         border: 3px solid goldenrod;
+
+         
+    }
+
     p {
         font-weight: bold;
         font-size: 25px;
     }
 
-    h3 {
-       
-       color: #ff0000; 
-
-    }
-
-    #cotação {
-            
-        color: #ff0000; 
-
-    }
 
     #subliminar {
 
          color: rgba(82, 71, 71, 0.062);
+    }
+
+    #valor-final {
+        color: #ff0000;
+
+
     }
 
     button {
@@ -96,14 +99,16 @@
 
     function calcularReal(){
         let rublo = document.getElementById("input-rublo").value //variável guarda valor do rublo digitado
-        let real = document.getElementById("input-real").value // varialvel guarda valor do real digitado
+        let real = document.getElementById("input-real").value = 0.068 // valor fixo do real 
 
-        let resultado = rublo * real // variavel guarda o valor do resultado
+        let calculo = rublo * real // variavel calcula o valor do resultado
 
-        alert(resultado) // mostra na tela o resultado
+        let resultado = document.getElementById("valor-final").value = (calculo) 
+        
     }
-
-  
+    
+    
+   
 
 
 
